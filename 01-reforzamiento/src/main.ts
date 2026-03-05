@@ -1,24 +1,20 @@
 import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+// import { getHeroesByOwner } from './bases/08-imp-exp';
+// import { Owner } from './data/heroes.data';
+
+// import './bases/01-const-let';
+// import './bases/02-template-string';
+// import './bases/03-object-literal';
+// import './bases/04-arrays';
+// import './bases/05-functions';
+// import './bases/06-obj-destructuring';
+// import './bases/07-array-destructuring';
+import './bases/08-imp-exp';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
+   <h1>Hola Mundo</h1>
   </div>
 `
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+// console.log(getHeroesByOwner(Owner.DC));
