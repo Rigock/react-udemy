@@ -29,11 +29,11 @@ import type { CSSProperties } from "react";
 
 export const MyAwesomeApp = () => {
   return (
-    <>
-      <h1> {firstName} </h1>
+    <div data-testid="div-app">
+      <h1 data-testid="first-name-title"> {firstName} </h1>
       <h3> {lastName} </h3>
-
-      <p> {favoriteGames.join(', ')} </p>
+      
+      <p className="mi-favorita"> {favoriteGames.join(', ')} </p>
 
       <h1> {isActive ? 'Activo' : 'Yucas'} </h1>
 
@@ -43,7 +43,7 @@ export const MyAwesomeApp = () => {
          {/* {address.country} */}
          {JSON.stringify(address)}
       </p>
-    </>
+    </div>
   )
 
 }
