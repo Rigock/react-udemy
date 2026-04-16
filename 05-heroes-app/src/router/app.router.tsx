@@ -8,6 +8,7 @@ import { HomePage } from "@/heroes/pages/home/HomePage";
 import { lazy } from "react";
 // import { SearchPage } from "@/heroes/pages/search/SearchPage";
 
+// eslint-disable-next-line react-refresh/only-export-components
 const SearchPage = lazy(() => import('@/heroes/pages/search/SearchPage'));
 
 export const appRouter = createBrowserRouter([
