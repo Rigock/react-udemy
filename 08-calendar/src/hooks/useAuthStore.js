@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import { calendarApi } from "../api";
-import { onLogin, onLogout, clearErrorMessage, checking } from "../store";
+import { onLogin, onLogout, clearErrorMessage, checking, onLogoutCalendar } from "../store";
 
 
 
@@ -50,6 +50,7 @@ export const useAuthStore = () => {
       localStorage.setItem('token', data.token);
       localStorage.setItem('token-init-date', new Date().getTime());
       dispatch(onLogin({name: data.name, uid: data.uid}));      
+    // eslint-disable-next-line no-unused-vars
     } catch (error) {
       localStorage.clear();
       dispatch(onLogout());      
@@ -59,6 +60,7 @@ export const useAuthStore = () => {
   const startLogout = () => {
     localStorage.clear();
     dispatch(onLogout());
+    dispatch(onLogoutCalendar());
   }
   
 
@@ -67,7 +69,6 @@ export const useAuthStore = () => {
     errorMessage,
     status,
     user,
-
 
     //* Metodos
     checkAuthToken,
